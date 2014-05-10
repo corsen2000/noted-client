@@ -4,6 +4,10 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
     this.route("login");
+
+    this.resource('notes', function() {
+      this.route('new');
+    });
 });
 
 export default Router;
