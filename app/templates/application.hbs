@@ -20,6 +20,12 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+{{#if session.isAuthenticated}}
+  <h2>Authenticated!</h2>
+{{else}}
+  <h2>Not Authenticated...</h2>
+{{/if}}
+
 <div class="container">
     {{outlet}}
 </div>
