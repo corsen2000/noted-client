@@ -2,7 +2,7 @@ var CustomAuthenticator = Ember.SimpleAuth.Authenticators.Base.extend({
     restore: function(data) {
       return new Ember.RSVP.Promise(function(resolve) {
         resolve(data);
-      });      
+      });
     },
     authenticate: function(options) {
       return $.ajax({
@@ -14,9 +14,6 @@ var CustomAuthenticator = Ember.SimpleAuth.Authenticators.Base.extend({
           password: 'test'
         }
       });
-    },
-    invalidate: function() {
-      alert('invalidate');
     }
 });
 

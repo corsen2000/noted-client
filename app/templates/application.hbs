@@ -16,15 +16,21 @@
       <ul class="nav navbar-nav">
         <li>{{#link-to 'notes.new'}}New{{/link-to}}</li>
       </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {{#if session.isAuthenticated}}
+          <li>
+            <button type="button" class="btn btn-link navbar-btn" {{ action 'invalidateSession' }}>Logout</button>
+          </li>
+        {{else}}
+        <li>
+          <button type="button" class="btn btn-link navbar-btn" {{ action 'authenticateSession' }}>Login</button>
+        </li>        
+        {{/if}}
+      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-{{#if session.isAuthenticated}}
-  <h2>Authenticated!</h2>
-{{else}}
-  <h2>Not Authenticated...</h2>
-{{/if}}
 
 <div class="container">
     {{outlet}}
