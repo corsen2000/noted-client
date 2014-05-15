@@ -1,6 +1,8 @@
 var CustomAuthenticator = Ember.SimpleAuth.Authenticators.Base.extend({
     restore: function(data) {
-      alert('restore');      
+      return new Ember.RSVP.Promise(function(resolve) {
+        resolve(data);
+      });      
     },
     authenticate: function(options) {
       return $.ajax({
