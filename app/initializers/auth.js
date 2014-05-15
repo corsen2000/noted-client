@@ -10,8 +10,8 @@ var CustomAuthenticator = Ember.SimpleAuth.Authenticators.Base.extend({
         type: 'POST',
         dataType: 'json',
         data: {
-          email: 'test@test.com',
-          password: 'test'
+          email: options.identification,
+          password: options.password
         }
       });
     }
