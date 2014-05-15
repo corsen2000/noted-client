@@ -20,10 +20,19 @@ var CustomAuthenticator = Ember.SimpleAuth.Authenticators.Base.extend({
     }
 });
 
+var CustomAuthorizer = Ember.SimpleAuth.Authorizers.Base.extend({
+  authorize: function(jqXHR) {
+    jqXHR.setRequestHeader('Authorization', 'Token token=' + this.session.content.auth_token);
+  }
+});
+
 export default {
   name: 'authentication',
   initialize: function(container, application) {
     container.register('authenticator:custom', CustomAuthenticator);
-    Ember.SimpleAuth.setup(container, application);
+    container.register('authorizer:custom', CustomAuthorizer);
+    Ember.SimpleAuth.setup(container, application, {
+      authorizerFactory: 'authorizer:custom'
+    });
   }
 };
