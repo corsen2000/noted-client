@@ -7,7 +7,9 @@ Router.map(function() {
 
     this.resource('notes', function() {
       this.route('new');
+      this.route('note', { 'path' : '/:note_id' });
     });
+
 });
 
 export default Router;

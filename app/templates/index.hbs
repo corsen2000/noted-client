@@ -13,7 +13,7 @@
         <ul>
         {{#each note in notes}}
             <li>
-                {{#link-to '' note}}
+                {{#link-to 'notes.note' note}}
                     {{note.title}}
                 {{/link-to}}
             </li>
