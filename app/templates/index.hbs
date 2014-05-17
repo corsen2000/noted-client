@@ -7,3 +7,17 @@
         </form>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-12">
+        <ul>
+        {{#each note in notes}}
+            <li>
+                {{#link-to '' note}}
+                    {{note.title}}
+                {{/link-to}}
+            </li>
+        {{/each}}            
+        </ul>
+    </div>
+</div>
