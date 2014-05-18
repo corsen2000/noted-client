@@ -1,3 +1,15 @@
-<h1>{{title}}</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+        {{title}}
 
-{{content.content}}
+        <button class="btn btn-default btn-xs pull-right">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </button>        
+    </h3>
+  </div>
+  <div class="panel-body">
+    {{content.content}}
+  </div>
+  <div class="panel-footer">{{tag_list}}</div>
+</div>
