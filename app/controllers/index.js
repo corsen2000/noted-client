@@ -5,6 +5,9 @@ export default Ember.ObjectController.extend({
         search: function () {
             var notes = this.store.find('note');
             this.set('notes', notes);
+        },
+        deleteNote: function(note) {
+            note.destroyRecord();
         }
     }
 });

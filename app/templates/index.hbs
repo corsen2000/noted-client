@@ -23,6 +23,9 @@
                 {{#link-to 'notes.edit' note class="btn btn-default btn-xs"}}
                     <span class="glyphicon glyphicon-pencil"></span>
                 {{/link-to}}
+                <button {{action "deleteNote" note}} class="btn btn-danger btn-xs">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
                 </td>
             </tr>
             {{/each}}

@@ -3,6 +3,12 @@
     <h3 class="panel-title">
         {{title}}
 
+        <button {{action "deleteNote" content}} class="btn btn-danger btn-xs pull-right">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+
+        <span class="pull-right">&nbsp;</span>
+
         {{#link-to 'notes.edit' content class="btn btn-default btn-xs pull-right"}}
           <span class="glyphicon glyphicon-pencil"></span>
         {{/link-to}}
