@@ -3,9 +3,10 @@
     <h3 class="panel-title">
         {{title}}
 
-        <button class="btn btn-default btn-xs pull-right">
+        {{#link-to 'notes.edit' content class="btn btn-default btn-xs pull-right"}}
           <span class="glyphicon glyphicon-pencil"></span>
-        </button>        
+        {{/link-to}}
+        
     </h3>
   </div>
   <div class="panel-body">
