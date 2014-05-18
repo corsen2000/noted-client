@@ -12,14 +12,23 @@
 
 <div class="row">
     <div class="col-md-12">
-        <ul>
-        {{#each note in notes}}
-            <li>
+        <table id="note-search-results" class="table table-hover">
+            <tbody>
+            {{#each note in notes}}
+            <tr>
+                <td>
                 {{#link-to 'notes.note' note}}
                     {{note.title}}
+                {{/link-to}}                    
+                </td>
+                <td style="text-align: right;">
+                {{#link-to 'notes.edit' note class="btn btn-default btn-xs"}}
+                    <span class="glyphicon glyphicon-pencil"></span>
                 {{/link-to}}
-            </li>
-        {{/each}}            
-        </ul>
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
     </div>
 </div>

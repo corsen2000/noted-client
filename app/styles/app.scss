@@ -10,3 +10,14 @@ body {
 .form-control.new-note-content {
     height: 450px;
 }
+
+#note-search-results {
+    td:first-child {
+        padding: 0;
+        > a {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+        }   
+    }
+}
