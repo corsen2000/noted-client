@@ -10,7 +10,8 @@
     "$": true,
     "ENV": true,
     "module": true,
-    "marked": true
+    "marked": true,
+    "hljs": true
   },
   "node" : false,
   "browser" : false,
