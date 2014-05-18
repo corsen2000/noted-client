@@ -1,14 +1,18 @@
 <div class="row">
     <div class="col-md-12">
-        <form role="form">
+        <form role="form" {{action createNote on="submit"}}>
             <div class="form-group">
-                <input type="text" class="form-control" id="note-title" placeholder="Title">
+                {{input value=noteTitle class="form-control" placeholder="Title"}}
             </div>
             <div class="form-group">
-                <textarea class="form-control" id="note-content" placeholder="Content (Markdown)" style="height: 450px;"></textarea>
+                {{textarea 
+                    value=noteContent 
+                    class="form-control new-note-content" 
+                    placeholder="Content (Markdown)"
+                }}
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="note-tags" placeholder="Tags">
+                {{input value=noteTags class="form-control" placeholder="Tags"}}
             </div>
             <button type="submit" class="btn btn-default">Create Note</button>
         </form>        
