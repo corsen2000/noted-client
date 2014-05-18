@@ -12,6 +12,7 @@ var app = new EmberApp({
 app.import('vendor/ember-data/ember-data.js');
 app.import('vendor/ember-simple-auth/ember-simple-auth.js');
 app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js');
+app.import('vendor/marked/lib/marked.js');
 
 // If the library that you are including contains AMD or ES6 modules that
 // you would like to import into your application please specify an
