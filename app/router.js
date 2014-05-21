@@ -11,6 +11,10 @@ Router.map(function() {
       this.route('edit', { 'path' : '/:note_id/edit' });
     });
 
+    this.resource('users', function() {
+        this.route('new');
+    });
+
 });
 
 export default Router;
