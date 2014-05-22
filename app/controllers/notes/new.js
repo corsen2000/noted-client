@@ -15,6 +15,9 @@ export default Ember.ObjectController.extend({
         }
     },
     transitionToNote: function(note) {
+        this.set('noteTitle', '');
+        this.set('noteContent', '');
+        this.set('noteTags', '');
         this.transitionToRoute('notes.note', note);
     },
     failure: function() {}
