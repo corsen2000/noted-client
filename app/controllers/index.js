@@ -24,6 +24,7 @@ export default Ember.ObjectController.extend({
         },
         deleteNote: function(note) {
             note.destroyRecord();
+            this.set('notes', this.get('notes').without(note));
         }
     }
 });
